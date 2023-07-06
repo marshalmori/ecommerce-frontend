@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Button, Card } from "react-bootstrap";
 import Rating from "../components/Rating";
 import axios from "axios";
-import products from "../products";
 
 const ProductScreen = ({ match }) => {
   const product_id = useParams();

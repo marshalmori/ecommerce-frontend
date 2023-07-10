@@ -105,7 +105,7 @@ const ProductScreen = ({ history }) => {
                     <Row>
                       <Col>Qty:</Col>
                       <Col xs="auto" className="my-1">
-                        <Form.Control
+                        <Form.Select
                           as="select"
                           value={qty}
                           onChange={(e) => setQty(e.target.value)}
@@ -115,7 +115,7 @@ const ProductScreen = ({ history }) => {
                               {x + 1}
                             </option>
                           ))}
-                        </Form.Control>
+                        </Form.Select>
                       </Col>
                     </Row>
                   </ListGroup.Item>

@@ -15,7 +15,7 @@ import {
   Card,
 } from "react-bootstrap";
 import Message from "../components/Message";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 import { useDispatch, useSelector } from "react-redux";
 
 function CartScreen() {
@@ -34,7 +34,8 @@ function CartScreen() {
   }, [dispatch, id, qty]);
 
   const removeFromCartHandler = (id) => {
-    // dispatch(removeFromCart(id));
+    dispatch(removeFromCart(id));
+    navigate("/cart");
   };
 
   const checkoutHandler = () => {
